@@ -1,8 +1,6 @@
 package ru.obrubov.os.backexample;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -14,6 +12,7 @@ import lombok.Data;
 @Table
 @Entity
 public class Item {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private Long id;
     private String code;
